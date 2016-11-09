@@ -1,0 +1,20 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+.error-messages {
+    background-color: rgba(169,68,66,0.9);
+    color: #ffffff;
+    width: 350px;
+    padding-left: 2px;
+}
+
+.form-group input {
+    height: 50px;
+    width: 350px;
+    border-radius: 0;
+}
+.row.btn {
+    margin-right: 2px;
+}
