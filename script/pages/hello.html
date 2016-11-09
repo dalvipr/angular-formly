@@ -1,0 +1,37 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--<h1>Welcome</h1>-->
+
+<!--</body>-->
+<!--</html>-->
+
+<div class="col-md-6 col-md-offset-4">
+    <form ng-submit="vm.onSubmit()" name="vm.form">
+        <div class="row ">
+            <formly-form model="vm.model" fields="vm.fields" options="vm.options" form="vm.bgCheck">
+
+            </formly-form>
+        </div>
+        <div class="row ">
+            <a href="#/" type="submit"  class="btn btn-primary submit-button  col-md-3 col-md-offset-1" >Previous</a>
+
+            <a  href="#/thanks" type="submit" class="btn btn-primary submit-button col-md-3" style="margin-left: 2px"
+                ng-disabled="vm.bgCheck.$invalid">Submit</a>
+        </div>
+    </form>
+    <script type="text/ng-template" id="error-messages.html">
+        <formly-transclude></formly-transclude>
+        <div ng-messages="fc.$error" ng-if="form.$submitted || options.formControl.$touched" class="error-messages">
+            <div ng-message="required"  class="message">{{to.label}} is required</div>
+            <div ng-message="maxlength"  class="message">Please enter no more than {{to.maxlength}} characters</div>
+            <div ng-message="mask"  class="message">Invalid {{to.label}}</div>
+            <div ng-message="$invalid"  class="message">{{to.label}} contains invalid characters</div>
+        </div>
+    </script>
+</div>
